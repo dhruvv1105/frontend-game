@@ -4,7 +4,7 @@ import { login, logout, getCurrentUser } from "../../auth"; // Correct path if a
 
 import "./MainNavigation.css";
 
-const FRONTEND_URL = process.env.REACT_APP_FRONTEND_URL; // Ensure this is defined
+const FRONTEND_URL = import.meta.env.REACT_APP_FRONTEND_URL; // Ensure this is defined
 
 const MainNavigation = () => {
   const [user, setUser] = useState(null);

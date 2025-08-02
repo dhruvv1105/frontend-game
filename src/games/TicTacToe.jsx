@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Chat, useChatContext, Channel } from "stream-chat-react";
-import { StreamChat } from "stream-chat";
+//import { StreamChat } from "stream-chat";
 import Cookies from "universal-cookie";
 
 import "./TicTacToe.css";
@@ -11,7 +11,7 @@ const TicTacToeGame = () => {
   const Game = ({ channel }) => {
     const [playersJoined, setPlayersJoined] = useState(
       channel.state.watcher_count === 2
-    );
+    ); 
     if (!playersJoined) {
       return <div>Waiting for other player to join...</div>;
     }
@@ -50,7 +50,7 @@ const TicTacToeGame = () => {
             <input
               placeholder="User of rival..."
               onChange={(event) => {
-                setRivalUsername(event.target.value);
+                setRivalUsername((event.target.value));
               }}
             />
             <button onClick={createChannel}>Join/Start Game</button>

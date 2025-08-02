@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, useLocation } from "react-router-dom";
-import Cookies from "universal-cookie";
-import { StreamChat } from "stream-chat";
+//import Cookies from "universal-cookie";
+//import { StreamChat } from "stream-chat";
 
 import "./App.css";
 import MainNavigation from "./components/NavigationBar/MainNavigation";

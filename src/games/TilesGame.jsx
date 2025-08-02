@@ -15,7 +15,7 @@ const TilesGame = () => {
     let gameId = null;
     let playerColor = null;
 
-    let ws = new WebSocket(process.env.REACT_APP_BACKEND_WEBSOCKET_URL);
+    let ws = new WebSocket(import.meta.env.REACT_APP_BACKEND_WEBSOCKET_URL);
     // https://
     const btnCreate = document.getElementById("btnCreate");
     const btnJoin = document.getElementById("btnJoin");

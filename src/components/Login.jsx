@@ -10,13 +10,13 @@ function Login() {
       <input
         placeholder="User Name"
         onChange={(event) => {
-          setUsername = event.target.value;
+          setUsername(event.target.value);
         }}
       />
       <input
         placeholder="Password"
         onChange={(event) => {
-          setPassword = event.target.value;
+          setPassword(event.target.value);
         }}
       />
       <button onCLick={login}>Login</button>
