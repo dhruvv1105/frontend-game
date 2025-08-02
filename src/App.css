@@ -1,0 +1,87 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.thumbnail-container {
+  width: 200px; /* Fixed width */
+  height: 200px; /* Fixed height to prevent shifting */
+  margin-top: 1%;
+  margin-left: 1%;
+  border-radius: 10%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.thumbnail-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the container without distortion */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.thumbnail-container:hover img {
+  opacity: 0.7; /* Darken the image on hover */
+}
+
+.thumbnail-container .overlay-text {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  pointer-events: none; /* Allows clicking through the text */
+}
+
+.thumbnail-container:hover .overlay-text {
+  opacity: 1; /* Show text on hover */
+}
+
+/* Additional styles to maintain layout stability */
+.game-wrapper {
+  width: 100%; /* Make sure it spans full width */
+  max-width: 800px; /* Maximum width to keep game centered */
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px; /* Add some padding if necessary */
+  text-align: center; /* Center game elements */
+}

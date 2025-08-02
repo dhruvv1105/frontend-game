@@ -1,0 +1,50 @@
+.nav-bar {
+  margin-left: auto; /* Pushes the content to the far right */
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar img.avatar {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Ensures the image is square */
+  border-radius: 50%; /* Makes the image a circle */
+  object-fit: cover; /* Ensures the image covers the entire area */
+  cursor: pointer; /* Optional: adds a pointer cursor */
+  margin-left: 10px; /* Optional: space between the button and the image */
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.google-btn:hover {
+  background-color: #f7f7f7;
+}
+
+.google-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.btn-text {
+  font-family: Arial, sans-serif;
+}
