@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, useLocation } from "react-router-dom";
-//import Cookies from "universal-cookie";
-//import { StreamChat } from "stream-chat";
+import Cookies from "universal-cookie";
 
 import "./App.css";
 import MainNavigation from "./components/NavigationBar/MainNavigation";
@@ -45,7 +44,6 @@ const Thumbnail = () => {
 
 const AppContent = () => {
   const [user, setUser] = useState(null);
-  const cookies = new Cookies();
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -64,13 +62,13 @@ const AppContent = () => {
   }, []);
 
   return (
-    <>
+    <div className="App">
       <MainNavigation />
       <AppRoutes />
       <Thumbnail />
       <Footer />
       <FloatingWidget />
-    </>
+    </div>
   );
 };
 
